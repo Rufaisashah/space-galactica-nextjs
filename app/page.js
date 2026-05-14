@@ -1,5 +1,5 @@
 import Link from "next/link";
- 
+
 const links = [
   {
     href: "/astronomy",
@@ -10,7 +10,7 @@ const links = [
   },
   {
     href: "/rover",
-    icon: "🚀",
+
     title: "Mars Rover Photos",
     description: "Live photos from the Curiosity rover on Mars",
     tag: "Client Side",
@@ -44,7 +44,7 @@ const links = [
     tag: "CSR",
   },
 ];
- 
+
 export default function Home() {
   return (
     <>
@@ -233,21 +233,25 @@ export default function Home() {
           border-top: 1px solid rgba(255,255,255,0.06);
         }
       `}</style>
- 
+
       <div className="stars" />
       <div className="glow" />
       <div className="glow-2" />
- 
+
       <div className="container">
         <header className="hero">
           <span className="tag">Week 5 — Next.js</span>
-          <h1>Space<br /><span>Galactica</span></h1>
+          <h1>
+            Space
+            <br />
+            <span>Galactica</span>
+          </h1>
           <p>
-            Exploring server-side rendering, client-side data fetching,
-            dynamic routing, and performance with NASA APIs.
+            Exploring server-side rendering, client-side data fetching, dynamic
+            routing, and performance with NASA APIs.
           </p>
         </header>
- 
+
         <nav className="grid">
           {links.map((link) => (
             <Link key={link.href} href={link.href} className="card">
@@ -259,10 +263,8 @@ export default function Home() {
             </Link>
           ))}
         </nav>
- 
-        <footer>
-          Space Galactica · Next.js {new Date().getFullYear()}
-        </footer>
+
+        <footer>Space Galactica · Next.js {new Date().getFullYear()}</footer>
       </div>
     </>
   );
